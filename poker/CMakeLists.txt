@@ -3,4 +3,4 @@ project(poker)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(poker main.cpp Carte.cpp Carte.h "aleatoire carte.cpp" test_main.cpp)
+add_executable(poker Carte.cpp Carte.h "aleatoire carte.cpp" test_main.cpp)
