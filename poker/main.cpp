@@ -20,17 +20,32 @@
 // 2
 // 1 = 14
 
+// trèfle = 20
+// coeur = 21
+// pique = 22
+// carreaux = 23
+
+
 using namespace std;
 
 //main
-int array1[] = {9, 10, 11, 12, 13};
+int array1[] = {9, 13, 10, 11, 12};
 int array2[] = {14, 13, 10,12,11};
+
+int cou[] = {20, 20, 20, 20,20};
 
 //tableau de comparaison
 int suite[] = {2, 3, 4, 5, 6};
 int QuinFLRO[] = {10, 11, 12, 13, 14};
 int QuinFL[] = {8, 9, 10, 11, 12};
+int trefle[] = {20, 20, 20, 20,20};
+int coeur[] = {21, 21, 21, 21, 21};
+int pique[] = {22, 22, 22, 22, 22};
+int carro[] = {23, 23, 23, 23, 23};
+
+
 int force;
+
 
 
 
@@ -63,7 +78,7 @@ int* triBulle(int arr6[], int size)
 
 }
 
-int mostValue (int arr1[], int size){
+int mostValue (int arr1[], int size, int cou1[]){
     int max = 0;
     int val = 0;
     for (int i = 0; i < size; ++i) {
@@ -84,8 +99,34 @@ int FuLL(){
 int DoublePaire(){
     std::cout << "Double Paire" <<std::endl;
 }
+int couleur(int cou1[]){
+    int a = 5;
+    int b = 5;
+    if (std::equal(cou1, cou1 + a, coeur)){
+        std::cout << "couleur de coeur" << std::endl;
+        force = 6;
+        std::cout << "La force est de " << force << std::endl;
+    }
+    if (std::equal(cou1, cou1 + a, trefle)){
+        std::cout << "couleur de trefle" << std::endl;
+        force = 6;
+        std::cout << "La force est de " << force << std::endl;
+    }
+    if (std::equal(cou1, cou1 + a, carro)){
+        std::cout << "couleur de carreaux" << std::endl;
+        force = 6;
+        std::cout << "La force est de " << force << std::endl;
+    }
+    if (std::equal(cou1, cou1 + a, pique)){
+        std::cout << "couleur de pique" << std::endl;
+        force = 6;
+        std::cout << "La force est de " << force << std::endl;
+    }
 
-int mostFrequent(int* arr, int size){
+}
+
+
+int mostFrequent(int* arr, int size, int cou1[]){
     int maxcount = 0;
     int element_having_max_freq;
     for (int i = 0; i < size; i++) {
@@ -134,11 +175,12 @@ int mostFrequent(int* arr, int size){
         std::cout << "La force est de " << force << std::endl;
     }
     if (count == 1){
-        mostValue(arr, 5);
+        couleur(cou1);
     }
 
 }
 
+/*
 int Suite (int arr1[]) {
 
     int m = 5;
@@ -154,22 +196,23 @@ int Suite (int arr1[]) {
         mostFrequent(arr1, 5);
     }
 
-}
+}*/
 
-int Suite2(int arr1[]){
+int Suite(int arr1[], int cou1[]){
     int i=0;
-    if(std::equal(arr1[i], arr1[i+1]-1, arr1[i+2]-2, arr1[i+3]-3==arr1[i+4]-4){
-        std::cout << 'suite' << std::endl;
+    if( arr1[i]== arr1[i+1]-1 && arr1[i+1]-1== arr1[i+2]-2 && arr1[i+2]-2== arr1[i+3]-3 && arr1[i+3]-3== arr1[i+4]-4){
+        std::cout << "suite" << std::endl;
         force=5;
-        std::cout << 'la force est de' << force << std::endl;
+        std::cout << "la force est de "<< force << std::endl;
     }
     else{
-        std::cout << 'pas de suite' << std::endl;
-        mostFrequent(arr1,5);
+        std::cout << "pas de suite" << std::endl;
+        mostFrequent(arr1,5, cou1);
     }
 }
 
-int QtFl (int arr3[]) {
+
+int QtFl (int arr3[], int cou1[]) {
 
     int p = 5;
     int q = 5;
@@ -181,25 +224,25 @@ int QtFl (int arr3[]) {
     }
     else{
         std::cout << "pas une Quinte Flush  " << std::endl;
-        Suite2(arr3);
+        Suite(arr3, cou1);
     }
 
 }
 
 
-int QtFR (int arr2[]) {
+int QtFR (int arr2[], int cou1[]) {
     force = 0;
     int s = 5;
     int t = 5;
-
-    if (s == t && std::equal(arr2, arr2 + t, QuinFLRO)){
+    int i = 0;
+    if (s == t && std::equal(arr2, arr2 + t, QuinFLRO) ){
         std::cout <<" QUINTE FLUSH ROYAL !!!" << std::endl;
         force = 10;
         std::cout << "La force est de " << force << std::endl;
     }
     else{
         std::cout << "pas une Quinte Flush Royal " << std::endl;
-        QtFl(arr2);
+        QtFl(arr2, cou1);
     }
 
 }
@@ -216,29 +259,29 @@ int main() {
     std::cout<<"MAIN 1" <<std::endl;
 
     triBulle(array1, 5);
-    Suite2(array1);
+
     //repet1(array, 5);
     //mostFrequent(array1, 5);
-    /*
-    QtFR(array1);
+    QtFR(array1, cou );
     main1 = force;
     std::cout << "La force de la main 1 est de "<< main1 << std::endl;
     std::cout<<"MAIN 2" <<std::endl;
     triBulle(array2, 5);
-    QtFR(array2);
+    QtFR(array1, cou );
     main2 = force;
-    std::cout <<"Qui gagne ?"<<std::endl;
+
     std::cout <<"la force de la main 2 est de "<< main2 << std::endl;
+    std::cout <<"Qui gagne ?"<<std::endl;
     if (main1 > main2){
         std::cout << "Le combinaison la plus forte est la main 1" <<std::endl;
     }
     if (main1 < main2){
         std::cout << "Le combinaison la plus forte est la main 2" <<std::endl;
     }
-    if (main1 = main2){
-        std::cout << "Les combinaisons des deux mains sont égales" <<std::endl;
+    if (main1 == main2){
+        std::cout << "Les combinaisons des deux mains sont egales" <<std::endl;
     }
-*/
+
     return 0;
 
 }
