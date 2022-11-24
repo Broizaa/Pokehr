@@ -4,6 +4,16 @@
 
 #include "Carte.h"
 
+Carte::Carte() : m_valeur(4), m_couleur("trefle")
+{
+
+}
+
+Carte::~Carte() {
+
+}
+
+
 /*
 char Carte::getCou() const {
     return cou;
