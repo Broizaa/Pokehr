@@ -1,47 +1,19 @@
-//
-// Created by Clément Szewczyk on 25/10/2022.
-//
+#ifndef DEF_CARTE
+#define DEF_CARTE
 
-#ifndef POKER_CARTE_H
-#define POKER_CARTE_H
+#include <iostream>
 
+using namespace std;
 
-class Carte {
-    public:
-    //CTOR
-    Carte(const Carte& val, const Carte& cou);
-    //DTOR
-    ~Carte();
-    //OPERATEUR D'AFFECTATION
+class Carte
+{
+public:
+    Carte();                    //constructor
+    ~Carte();                   //destructor
 
-    //OPERATEUR DE COMPARAISON
-
-
-
-
-
-    private:
-
-
-
-
+private:
+    std::string m_couleur;
+    int m_valeur;
 };
 
-
-#endif //POKER_CARTE_H
-
-
-/* Carte(char cou = 0, int val = 0);
-
-   char getCou() const;
-
-   void setCou(char cou);
-
-   int getVal() const;
-
-   void setVal(int val);
-*/
-
-
-/* char cou;
-      int val;*/
+#endif
