@@ -29,11 +29,11 @@
 using namespace std;
 
 //main 1
-int array1[] = {14, 6, 14, 9, 2};
+int tab1[] = {11, 3, 11, 3, 5};
 int coul1[] = {20, 20, 20, 20,22};
 
 //main 2
-int array2[] = {4, 2, 4, 5, 2};
+int tab2[] = {4, 2, 4, 5, 2};
 int coul2[] = {22,22,22,20,22};
 
 //tableau de comparaison
@@ -95,20 +95,12 @@ int mostValue (int arr1[], int size){
     std::cout << "La force est de " << force << std::endl;
 }
 
-int FuLL(){
-    std::cout << "full" <<std::endl;
-}
-
-int DoublePaire(){
-    std::cout << "Double Paire" <<std::endl;
-}
-
 
 // Fonction qui permet de trouver la valeur qui se repète le plus
 int mostFrequent(int* arr, int size){
     // cherche la valeur
     int maxcount = 0;
-    int element_having_max_freq;
+    int valeur_repet;
     for (int i = 0; i < size; i++) {
         int count = 0;
 
@@ -119,17 +111,17 @@ int mostFrequent(int* arr, int size){
 
         if (count > maxcount) {
             maxcount = count;
-            element_having_max_freq = arr[i];
+            valeur_repet = arr[i];
         }
 
     }
 
-    std::cout << "le plus frequent : " << element_having_max_freq << std::endl;
+    std::cout << "le plus frequent : " << valeur_repet << std::endl;
 
     // compte le nombre de répétition
     int count = 0;
     for (int i = 0; i < size; i++) {
-        if (element_having_max_freq == arr[i]) {
+        if (valeur_repet == arr[i]) {
             count++;
         }
     }
@@ -137,21 +129,35 @@ int mostFrequent(int* arr, int size){
     std::cout << "Nombre de fois : " << count << std::endl;
 
     if (count == 2){
-        std::cout << "PAIRE de " << element_having_max_freq <<std::endl;
-        //DoublePaire();
-        force = 2;
-        std::cout << "La force est de " << force << std::endl;
-        //faire fonction qui vérifie double pair ou full
+        //recherche de la double paire
+        if ( arr[0] == arr[1] && arr[0]!= valeur_repet || arr[2] == arr[3] && arr[2] != valeur_repet || arr[3] == arr[4] && arr[3] != valeur_repet){
+            std::cout << "Double paire" << std::endl;
+            force =3;
+            std::cout << "La force est de " << force << std::endl;
+        }
+        else{
+            std::cout << "PAIRE de " << valeur_repet <<std::endl;
+            force = 2;
+            std::cout << "La force est de " << force << std::endl;
+        }
+
+
     }
     if (count == 3){
-        std::cout << "BRELAN de " << element_having_max_freq <<std::endl;
-        // faire une vérification du full
-        force = 4;
-        std::cout << "La force est de " << force << std::endl;
-        //FuLL();
+        //recherche du full
+        if ( arr[0] == arr[1] && arr[0]!= valeur_repet || arr[3] == arr[4] && arr[3] != valeur_repet){
+            std::cout << "full" << std::endl;
+            force = 8;
+            std::cout << "La force est de " << force << std::endl;
+        }
+        else{
+            std::cout << "Brelan " << valeur_repet <<std::endl;
+            force = 4;
+            std::cout << "La force est de " << force << std::endl;
+        }
     }
     if (count == 4){
-        std::cout << "CARRE de " << element_having_max_freq <<std::endl;
+        std::cout << "CARRE de " << valeur_repet <<std::endl;
         force = 8;
         std::cout << "La force est de " << force << std::endl;
     }
@@ -287,8 +293,8 @@ int main() {
 
     std::cout<<"MAIN 1" <<std::endl;
 
-    triBulle(array1, 5);
-    QtFR(array1, coul1 );
+    triBulle(tab1, 5);
+    QtFR(tab1, coul1 );
 
     main1 = force;
     std::cout << "La force de la main 1 est de "<< main1 << std::endl;
@@ -296,8 +302,8 @@ int main() {
 
     std::cout<<"MAIN 2" <<std::endl;
 
-    triBulle(array2, 5);
-    QtFR(array2, coul2 );
+    triBulle(tab2, 5);
+    QtFR(tab2, coul2 );
 
     main2 = force;
     std::cout <<"la force de la main 2 est de "<< main2 << std::endl;

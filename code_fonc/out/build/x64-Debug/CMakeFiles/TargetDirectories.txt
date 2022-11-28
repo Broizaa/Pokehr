@@ -1,0 +1,3 @@
+C:/Users/Clément Szewczyk/Documents/GitHub/Pokehr/code_fonc/out/build/x64-Debug/CMakeFiles/poker.dir
+C:/Users/Clément Szewczyk/Documents/GitHub/Pokehr/code_fonc/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Clément Szewczyk/Documents/GitHub/Pokehr/code_fonc/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

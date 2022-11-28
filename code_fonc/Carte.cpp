@@ -1,36 +1,14 @@
-//
-// Created by Clément Szewczyk on 25/10/2022.
-//
-
-//#include "Carte.h"
+#include <iostream>
 /*
-Carte::Carte() : m_valeur(4), m_couleur("trefle")
-{
+#include "carte.hpp"
 
+Carte::Carte() //: valeur(), couleur()
+{
+    //std::string valeur[] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Valet", "Dame", "Roi", "As"};
+    //std::string couleur[] = {"Trefle", "Coeur", "Carreau", "Pique"};
 }
 
 Carte::~Carte() {
-
-}*/
-
-
-/*
-char Carte::getCou() const {
-    return cou;
+    
 }
-
-void Carte::setCou(char cou) {
-    Carte::cou = cou;
-}
-
-int Carte::getVal() const {
-    return val;
-}
-
-void Carte::setVal(int val) {
-    Carte::val = val;
-}
-
-Carte::Carte(char cou, int val) : cou(cou), val(val) {}
 */
-
