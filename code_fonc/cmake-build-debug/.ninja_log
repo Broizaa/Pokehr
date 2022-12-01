@@ -1,0 +1,7 @@
+# ninja log v5
+591	822	6911157132299950	poker.exe	290374fdb5a88c70
+4	510	6880379058246731	CMakeFiles/poker.dir/test.cpp.obj	bf573698c74ef050
+4	590	6911157129852589	CMakeFiles/poker.dir/main.cpp.obj	6565e5dbc2a86448
+19	533	6910638184249890	CMakeFiles/poker.dir/Carte.cpp.obj	4e1abeb4423f61e
+5	194	6904629906329306	CMakeFiles/poker.dir/test_main.cpp.obj	ca0f24d16792d4c5
+8	471	6910150072424115	CMakeFiles/poker.dir/aleatoire_carte.cpp.obj	92437667fa3517c1
