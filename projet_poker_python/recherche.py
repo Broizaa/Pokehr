@@ -32,13 +32,13 @@ print (main)
 
 # Main manuel 
 
-c1 = Card(Value.DEUX, Color.P)
-c2 = Card(Value.SIX, Color.P)
+c1 = Card(Value.SEPT, Color.P)
+c2 = Card(Value.HUIT, Color.P)
 c3 = Card(Value.NEUF, Color.P)
-c4 = Card(Value.HUIT, Color.P)
-c5 = Card(Value.DIX, Color.P)
-c6 = Card(Value.CINQ, Color.K)
-c7 = Card(Value.SIX, Color.K)
+c4 = Card(Value.NEUF, Color.P)
+c5 = Card(Value.NEUF, Color.P)
+c6 = Card(Value.DIX, Color.K)
+c7 = Card(Value.VALET, Color.K)
 
 main2 = [c1, c2, c3, c4, c5, c6, c7]
 
@@ -74,9 +74,10 @@ def Suite(int_list):
     count = 1
     result = []
     for i in range(0, 5):
-        if int_list[i] - int_list[i+1] == 1:
-            result.append(int_list[i])
-            print (result)
+        if int_list[i] - int_list[i+1] == 1 or int_list[i]== int_list[i+1]:
+            if int_list[i] not in result:
+                result.append(int_list[i])
+                print (result)
             count += 1
             if count >= 5: 
                 return ("suite avec comme valeur la plus haute", main2[0])
@@ -137,12 +138,28 @@ def remove_duplicates(liste_value):
         # Si la valeur actuelle n'est pas déjà dans la nouvelle liste, on l'ajoute
         if i not in nv_main:
             nv_main.append(i)
+    for i in nv_main:
+        if liste_value.count(i) > 1:
+            nv_main.remove(i)
     return nv_main
 
+def reste(nv_main):
+    rest = len(nv_main) -2
+    final = []
+    if rest > 0:
+        for i in range(rest):
+           final.append(nv_main[i])
+           
+    else:
+        return nv_main
+    return final  
+  
 # Appel de la fonction avec la liste originale en argument
 unique_list = remove_duplicates(liste_value)
 print("Liste sans doublons:", unique_list)
     
 
-print(repetition(liste_value))
+print("rest")
+print(reste(unique_list))
 
+#print(repetition(liste_value))
