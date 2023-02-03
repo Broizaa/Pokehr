@@ -10,7 +10,7 @@ def test_card_deck():
         (10, Color.T),
         (Value.NEUF, 12),
     )
-
+    
     print(dir(Color))
     for v, c in datas:
         try:

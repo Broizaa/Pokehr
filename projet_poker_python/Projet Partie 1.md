@@ -19,15 +19,15 @@ Dans ce jeu, les combinaisons possibles sont du plus fort au moins fort:
 
 A partir d'une main de 7 cartes, vous devrez indiquer quelle est la combinaison la plus forte trouvée. Vous préciserez la hauteur et/ou la couleiur des cartes qui forment la combinaison ainsi que celles qui restent. Ces infos seront consignées dans un tuple. Voici des exemples de tuples attendus pour:
 
-+ La suite à la couleur:    couleur et hauteur de la carte la plus forte.
-+ Le carré: 			2 hauteurs: celle du carré, puis de la carte restante.
-+ Le full: 			2 hauteurs, celle du brelan, puis celle de la paire.
-+ La couleur: 			couleur et hauteur de toutes les cartes, par ordre décroissant.
-+ La suite: 			hauteur de la carte la plus forte.
-+ Le brelan:			3 hauteurs, celui du brelan, puis les 2 suivantes par hauteur décroissante.
-+ La double paire:		3 hauteurs, celle de la paire la plus forte en premier, puis la seconde paire et enfin la carte restante.
-+ La paire: 			4 hauteurs, celle de la paire, puis les autres cartes par hauteur décroissante.
-+ Rien:				Toutes les hauteurs par ordre décroissant.
++ La suite à la couleur: OK   couleur et hauteur de la carte la plus forte.  
++ Le carré: ook			2 hauteurs: celle du carré, puis de la carte restante.
++ Le full: 	OK		2 hauteurs, celle du brelan, puis celle de la paire.
++ La couleur: OK			couleur et hauteur de toutes les cartes, par ordre décroissant.
++ La suite: OK			hauteur de la carte la plus forte. 
++ Le brelan: OK			3 hauteurs, celui du brelan, puis les 2 suivantes par hauteur décroissante.
++ La double paire: OK		3 hauteurs, celle de la paire la plus forte en premier, puis la seconde paire et enfin la carte restante.
++ La paire: OK			4 hauteurs, celle de la paire, puis les autres cartes par hauteur décroissante.
++ Rien:	OK			Toutes les hauteurs par ordre décroissant.
 
 Vous devrez rendre un fichier source en Python, dont l’une des fonctions (ou une méthode d’un classe) renverront le résultat attendu. La main de 7 cartes sera passée en paramètres. Par exemple:
 
