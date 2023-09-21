@@ -25,9 +25,9 @@ print(main2)
 
 # Décomposition de la main
 # liste de string pour la couleur
-liste_couleur = Combinaison.decompocou(main2)
+liste_couleur = test_combinaison.decompocou(main2)
 # lsite d'int pour la valeur
-liste_value = Combinaison.decompolis(main2)
+liste_value = test_combinaison.decompolis(main2)
 
 # Recherche d'une couleur
 def couleur (string_list):
@@ -41,3 +41,35 @@ def couleur (string_list):
 
 couleur = couleur(liste_couleur)
 print(couleur)
+
+
+'''
+if (couleur == True and suite == True): 
+    print("Quinte flush")
+else: 
+    print("Pas de quinte flush")
+'''
+
+'''def remove_duplicates(liste_value):
+    # Création d'une nouvelle liste vide pour stocker les valeurs uniques
+    nv_main = []
+    # Parcours de la liste originale
+    for i in liste_value:
+        # Si la valeur actuelle n'est pas déjà dans la nouvelle liste, on l'ajoute
+        if i not in nv_main:
+            nv_main.append(i)
+    for i in nv_main:
+        if liste_value.count(i) > 1:
+            nv_main.remove(i)
+    return nv_main
+
+def reste(nv_main):
+    rest = len(nv_main) -2
+    final = []
+    if rest > 0:
+        for i in range(rest):
+           final.append(nv_main[i])
+           
+    else:
+        return nv_main
+    return final '''
